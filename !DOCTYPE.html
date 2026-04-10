@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Three Mile Island - Apresentação Profissional</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:linear-gradient(135deg,#0A2540 0%,#1E3A8A 100%);color:#fff;height:100vh;overflow:hidden;}
+        .slide{position:absolute;top:0;left:0;width:100%;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:40px;opacity:0;transition:all 0.8s ease-in-out;}
+        .slide.active{opacity:1;transform:scale(1);}
+        h1{font-size:3.5em;font-weight:700;color:#FCD34D;text-shadow:0 0 20px rgba(252,211,77,0.5);margin-bottom:20px;}
+        h2{font-size:2.2em;color:#FCD34D;margin-bottom:30px;}
+        .content{font-size:1.4em;line-height:1.6;max-width:900px;}
+        .timeline{display:flex;justify-content:space-around;width:100%;max-width:1000px;}
+        .event{background:rgba(255,255,255,0.1);padding:20px;border-radius:15px;backdrop-filter:blur(10px);border:1px solid rgba(252,211,77,0.3);flex:1;margin:0 10px;}
+        .icon{font-size:2em;margin-bottom:10px;}
+        .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;width:100%;max-width:800px;}
+        .stat{background:linear-gradient(145deg,rgba(255,255,255,0.1),rgba(0,0,0,0.3));padding:25px;border-radius:20px;border:1px solid #FCD34D;box-shadow:0 10px 30px rgba(0,0,0,0.5);}
+        button{position:fixed;bottom:30px;background:linear-gradient(45deg,#FCD34D,#FBBF24);border:none;padding:15px 30px;font-size:1.2em;border-radius:50px;cursor:pointer;box-shadow:0 10px 30px rgba(252,211,77,0.4);transition:all 0.3s;}
+        button.prev{left:30px;} button.next{right:30px;}
+        button:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(252,211,77,0.6);}
+        .progress{position:fixed;top:20px;right:20px;background:rgba(0,0,0,0.5);padding:10px 20px;border-radius:25px;}
+    </style>
+</head>
+<body>
+    <div class="progress" id="progress">Slide 1/12</div>
+    
+    <!-- SLIDE 1 -->
+    <div class="slide active" data-slide="1">
+        <h1>⚛️ THREE MILE ISLAND</h1>
+        <h2>O Acidente que Revolucionou a Nuclear</h2>
+        <div class="content">
+            <p><strong>28 Março 1979 | Nível INES 5</strong></p>
+            <p>Fusão Parcial | Zero Vítimas | Lições Globais</p>
+            <p style="font-size:1.8em;margin-top:40px;">[SEU NOME] | Engenheiro Nuclear</p>
+        </div>
+    </div>
+
+    <!-- SLIDE 2 -->
+    <div class="slide" data-slide="2">
+        <h1>📋 AGENDA EXECUTIVA</h1>
+        <div class="content">
+            <div style="font-size:1.6em;">
+                01. Contexto Técnico<br>
+                02. Timeline Crítica<br>
+                03. Root Cause Analysis<br>
+                04. Impactos Quantificados<br>
+                05. Lições Regulatórias<br>
+                06. Status & Recomendações
+            </div>
+            <p style="margin-top:40px;font-size:1.2em;">Total: <strong>10 minutos</strong></p>
+        </div>
+    </div>
+
+    <!-- SLIDE 3 -->
+    <div class="slide" data-slide="3">
+        <h1>🏭 PLANTA TMI-2</h1>
+        <div class="content">
+            <div class="stats">
+                <div class="stat">
+                    <div style="font-size:2.5em;">PWR</div>
+                    <div>Westinghouse 906MWe</div>
+                </div>
+                <div class="stat">
+                    <div style="font-size:2.5em;">📍</div>
+                    <div>Middletown, PA</div>
+                </div>
+                <div class="stat">
+                    <div style="font-size:2.5em;">3 meses</div>
+                    <div>Em operação</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 4 -->
+    <div class="slide" data-slide="4">
+        <h1>⏰ SEQUÊNCIA CRÍTICA</h1>
+        <div class="timeline">
+            <div class="event">
+                <div class="icon">04:00</div>
+                Bomba falha
+            </div>
+            <div class="event">
+                <div class="icon">04:05</div>
+                Válvula ABRE
+            </div>
+            <div class="event">
+                <div class="icon">💥</div>
+                Explosão H2
+            </div>
+            <div class="event">
+                <div class="icon">13:35</div>
+                Emergência
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 5 -->
+    <div class="slide" data-slide="5">
+        <h1>🔍 ROOT CAUSE ANALYSIS</h1>
+        <div class="content">
+            <div style="font-size:1.6em;">
+                <strong>HUMANO 60%</strong><br>
+                - Painel confuso<br>
+                - Luz verde falsa<br>
+                <br>
+                <strong>TÉCNICO 40%</strong><br>
+                - Válvula PORV<br>
+                - Redundância falhou
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 6 -->
+    <div class="slide" data-slide="6">
+        <h1>⚛️ FENÔMENOS FÍSICOS</h1>
+        <div class="content">
+            <div style="font-size:1.5em;">
+                - <strong>50%</strong> fusão combustível<br>
+                - <strong>350kg</strong> hidrogênio<br>
+                - Pressão <strong>x28</strong> atmosférica<br>
+                - <strong>13MCi</strong> gases liberados<br>
+                <br>
+                <span style="color:#FCD34D;font-size:2em;">CONTENÇÃO ✓</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 7 -->
+    <div class="slide" data-slide="7">
+        <h1>💰 IMPACTOS QUANTIFICADOS</h1>
+        <div class="stats">
+            <div class="stat">
+                <div style="font-size:2.5em;">$2.4B</div>
+                Custo total
+            </div>
+            <div class="stat">
+                <div style="font-size:2.5em;">0</div>
+                Cânceres extras
+            </div>
+            <div class="stat">
+                <div style="font-size:2.5em;">1.4 mrem</div>
+                Dose pública
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 8 -->
+    <div class="slide" data-slide="8">
+        <h1>📜 NUREG-0737 (1980)</h1>
+        <div class="content">
+            <div style="font-size:1.6em;">
+                <strong>140 AÇÕES OBRIGATÓRIAS:</strong><br>
+                ✓ Simuladores full-scope<br>
+                ✓ Emergency Response Facility<br>
+                ✓ HMI redesign (todas plants USA)<br>
+                <br>
+                <span style="color:#FCD34D;">Resultado: Zero L4+ USA</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 9 -->
+    <div class="slide" data-slide="9">
+        <h1>🎯 5 LIÇÕES ETERNAS</h1>
+        <div class="content" style="font-size:1.5em;">
+            1. Human Factors Engineering<br>
+            2. Safety Culture<br>
+            3. Independent Verification<br>
+            4. Public Communication<br>
+            5. PRA obrigatório
+        </div>
+    </div>
+
+    <!-- SLIDE 10 -->
+    <div class="slide" data-slide="10">
+        <h1>🏭 TMI 2024</h1>
+        <div class="content">
+            <div style="font-size:1.6em;">
+                TMI-1: Fechada 2019<br>
+                TMI-2: 95% descomissionada<br>
+                Final: 2028 | $1.2B
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 11 -->
+    <div class="slide" data-slide="11">
+        <h1>✅ CONCLUSÃO</h1>
+        <div class="content" style="font-size:1.8em;">
+            Teste real-world da contenção<br>
+            Base da regulação moderna<br>
+            <strong>Segurança > Tudo</strong>
+        </div>
+    </div>
+
+    <!-- SLIDE 12 -->
+    <div class="slide" data-slide="12">
+        <h1>❓ Q&A</h1>
+        <div class="content">
+            <p style="font-size:1.6em;">[SEU NOME]<br>[EMAIL] | [TELEFONE]</p>
+            <p style="margin-top:30px;font-size:1.2em;">NRC.gov | Kemeny Report 1979</p>
+        </div>
+    </div>
+
+    <button class="prev" onclick="prevSlide()">◀ Anterior</button>
+    <button class="next" onclick="nextSlide()">Próximo ▶</button>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 12;
+        
+        function updateSlide(n) {
+            document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
+            document.querySelector(`[data-slide="${n}"]`).classList.add('active');
+            document.getElementById('progress').textContent = `Slide ${n}/${totalSlides}`;
+            currentSlide = n;
+        }
+        
+        function nextSlide() {
+            if (currentSlide < totalSlides) updateSlide(currentSlide + 1);
+        }
+        
+        function prevSlide() {
+            if (currentSlide > 1) updateSlide(currentSlide - 1);
+        }
+        
+        document.addEventListener('keydown', e => {
+            if (e.key === 'ArrowRight') nextSlide();
+            if (e.key === 'ArrowLeft') prevSlide();
+        });
+        
+        // Auto-advance demo
+        setInterval(() => {
+            if (currentSlide < totalSlides) nextSlide();
+        }, 8000);
+    </script>
+</body>
+</html>
